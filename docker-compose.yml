@@ -3,7 +3,7 @@ services:
     image: odoo:13
     container_name: odoo
     ports:
-      - "8069:8069"
+      - "80:8069"
     env_file: .env
     volumes:
       - ./odoo:/etc/odoo
