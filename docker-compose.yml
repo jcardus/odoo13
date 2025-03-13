@@ -4,6 +4,7 @@ services:
     container_name: odoo
     ports:
       - "8069:8069"
+    env_file: .env
     volumes:
       - ./odoo:/etc/odoo
       - ./addons:/addons
