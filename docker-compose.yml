@@ -4,3 +4,6 @@ services:
     container_name: odoo
     ports:
       - "8069:8069"
+    volumes:
+      - ./odoo:/etc/odoo
+      - ./addons:/addons
