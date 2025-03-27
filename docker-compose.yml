@@ -12,6 +12,8 @@ services:
       - db:db  # This creates a link with hostname 'db'
 
   db:
+    ports:
+      - "5432:5432"
     image: postgres:15
     container_name: db
     environment:
