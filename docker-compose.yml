@@ -1,5 +1,6 @@
 services:
   odoo:
+    user: root
     image: odoo:13
     container_name: odoo
     ports:
@@ -8,7 +9,7 @@ services:
     volumes:
       - ./odoo:/etc/odoo
       - ./addons:/addons
-      - ./odoo-data:/var/lib/odoo
+      - ./filestore:/etc/odoo/data_dir/filestore
     links:
       - db:db  # This creates a link with hostname 'db'
 
